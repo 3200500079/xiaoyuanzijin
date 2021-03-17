@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/register/register",
+    "pages/index/getpassword",
+    "pages/shou",
+    "pages/shou/shou"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFA042",
+    "navigationBarTitleText": "登录",
+    "navigationBarTextStyle": "white"
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json" 
+}
