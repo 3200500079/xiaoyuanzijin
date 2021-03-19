@@ -1,11 +1,16 @@
 {
   "pages": [
+   
     "pages/index/index",
+    "pages/wodekaoqing/wodekaoqing",
+    "pages/shou/shou",
     "pages/logs/logs",
     "pages/register/register",
     "pages/index/getpassword",
     "pages/shou",
-    "pages/shou/shou"
+    "pages/wentishangbao/wentishangbao"
+   
+   
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -14,5 +19,5 @@
     "navigationBarTextStyle": "white"
   },
   "debug": true,
-  "sitemapLocation": "sitemap.json" 
+  "sitemapLocation": "sitemap.json"
 }

@@ -78,6 +78,24 @@ Page({
   },
   login:function(){
 
+
+      if(!account){
+        wx.showToast({
+          title: '请输入账号',
+          icon:'none',
+          duration:2000
+        })
+        return false;
+      } 
+      if(!pwd){
+wx.showToast({
+  title: '请输入密码',
+  icon:'none',
+  duration:2000
+})
+return false;
+      }
+
     console.log(app.getHeader())
       //点击登录
       console.log(account)
@@ -94,7 +112,10 @@ Page({
       success: res => {
         console.log(res);
         if(res.data.code==200){
-          app.globalData.token = res.data.extData;
+          app.globalData.uid = res.data.data.uId;
+          console.log(res.data.data.uId)
+          console.log("===================获得id")
+          console.log(app.globalData.uid)
           //存储token到本地
           try {
             wx.setStorageSync('token', res.data.extData);
@@ -119,6 +140,11 @@ Page({
       },
       fail: function (res) {
         console.log(res);
+        wx.showModal({
+          title: '登录失败',
+          showCancel: false,
+          content: '服务器异常',
+        });
       }
     });
   },

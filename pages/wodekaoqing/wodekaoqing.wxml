@@ -1,0 +1,24 @@
+<view class='shopDetail-box'>
+	<form bindsubmit="submitSurvey">
+		<view class="main">
+			<view class="profile-items house-id">
+				<text class="word" bindtap="chadakajilu">查看我的打卡记录</text>
+				<picker name="id" bindchange="changeSurvey" value="{{index}}" range="{{surveyArray}}" data-array="{{surveyArray}}" range-key="title">
+					<view class="building">
+						{{surveyArray[index].title}}
+					</view>
+				</picker>
+			</view>
+		</view>
+		<button disabled="{{dakastat}}" form-type="submit">{{daka}} </button>
+	</form>
+
+
+
+<block wx:for="{{dakajilu}}">
+	<view class="jilu">
+				<text class="jiluword">{{item.time}}</text>
+		</view>
+	</block>
+
+</view>

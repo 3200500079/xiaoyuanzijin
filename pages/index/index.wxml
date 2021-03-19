@@ -3,7 +3,7 @@
     <image class="login-img" src="/images/timg5.jpg"></image>
   </view>
   <view class="login-from">
-       <view class="title">校园资金管理系统</view>
+       <view class="title">校园卡资金管理系统</view>
     <!--账号-->
     <view class="inputView">
       <image class="nameImage" src="/images/login_name.png"></image>

@@ -1,66 +1,72 @@
-// pages/shou/shou.js
-Page({
-
-  /**
-   * 页面的初始数据
-   */
+//index.js
+//获取应用实例
+var app = getApp()
+Page({ 
   data: {
-
+    imgUrls: [
+      '../../images/message_1.jpeg',
+      '../../images/message_2.png',
+      '../../images/message_3.jpeg'
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000
+  },
+  //事件处理函数
+  bindViewTap: function() {
+    wx.navigateTo({
+      url: '../logs/logs'
+    })
+  },
+  goods: function() {
+    wx.navigateTo({
+      url: '../second_level/secondhand/goods'
+    })
+  },
+  notice: function() {
+    wx.navigateTo({
+      url: '../second_level/notice/notice'
+    })
+  },
+  repairs: function() {
+    wx.navigateTo({
+      url: '../second_level/repairs/repairs'
+    })
+  },
+  pay: function() {
+    wx.navigateTo({
+      url: '../second_level/pay/pay'
+    })
+  },
+  pay: function() {
+    wx.navigateTo({
+      url: '../second_level/pay/pay'
+    })
+  },
+  survey: function() {
+    wx.navigateTo({
+      url: '../survey/survey'
+    })
+  },
+  wodekaoqing: function() {
+    wx.navigateTo({
+      url: '../wodekaoqing/wodekaoqing'
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  wentishangbao:function(){
+    wx.navigateTo({
+      url: '../wentishangbao/wentishangbao',
+    })
+  }
+  ,
+  onLoad: function () {
+    console.log('onLoad')
+    
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  tapName: function(event) {
+    console.log(event)
   }
 })
+
